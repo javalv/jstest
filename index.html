@@ -4,29 +4,26 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <!--<script src="argsReload.js"></script>-->
-    <script src="constructor.js"></script>
+    <script src="app.js"></script>
     <script>
 
-//        function load() {
-//
-//            for (var i = 0; i < 3; i++) {
-//                (function(data){
-//                    document.getElementById('b' + (data + 1))
-//                            .addEventListener('click', function (event) {
-//
-//                        alert(data);
-//
-//                    })
-//                })(i);
-//
-//            }
-//            console.info(i);
-//        }
+        $.ready(function () {
+
+            console.log("$app is ready!");
+
+            $app.extend('does', function () {
+                var sum = 0;
+                for(var i =0 ;i<1000000000;i++){
+                    sum++;
+                }
+                console.info(sum);
+            })
+        })
 
     </script>
 </head>
 <body>
-    <button id="b1">aaaaaa</button>
+    <button id="b1" onclick="does()">aaaaaa</button>
     <button id="b2">bbbbbb</button>
     <button id="b3">cccccc</button>
 </body>
