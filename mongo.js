@@ -8,10 +8,10 @@
         );
         return ret.cid;
     }
-    var firstId = 500000;
+    var firstId = 600000;
     function getNewEncrycode(encrycode, sysId) {
         var arrs = encrycode.split("|");
-        return arrs[0] + "|" + arrs[1] + "|" + sysId + "|" + arrs[3] + "|" + arrs[4];
+        return arrs[0] + "|" + sysId + "|" + arrs[2] + "|" + arrs[3];
 
     }
 
@@ -38,9 +38,6 @@
             },
             'group.city': {
                 $in: citys
-            },
-            'encrycode': {
-                $regex: /.*[|].*[|].*[|].*[|].*/i
             }
 
         }).forEach(function (doc) {
@@ -51,7 +48,7 @@
             }
 
             var temp = encrycode.split('|');
-            if (!temp || temp.length != 5) {
+            if (!temp || temp.length != 4) {
                 print('error length: ' + doc._id);
                 return;
             }
