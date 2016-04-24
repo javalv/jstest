@@ -12,11 +12,14 @@
             console.log("$app is ready!");
 
             $app.extend('does', function () {
-                var sum = 0;
-                for(var i =0 ;i<1000000000;i++){
-                    sum++;
-                }
-                console.info(sum);
+                setTimeout(function () {
+                    var sum = 0;
+                    for(var i = 0 ;i<1000000000;i++){
+                        sum++;
+                    }
+                    console.info(sum);
+                },1000)
+
             })
         })
 
