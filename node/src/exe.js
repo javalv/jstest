@@ -1,4 +1,4 @@
-'use strict';
-import * as printf from  './Person';
+import * as person from  './Person';
 
-//printf(100, 200);
+var p = person.returnPerson(100, 2001);
+console.log(p.toString1());

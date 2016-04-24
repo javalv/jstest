@@ -1,24 +1,16 @@
+class Person {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
 
-    //'use strict';
-    //class Person{
-    //    constructor(x,y){
-    //        this.x = x;
-    //        this.y = y;
-    //    }
-    //
-    //    toString() {
-    //        return '(' + this.x + ', ' + this.y + ')';
-    //    }
-    //}
-    'use strict';
-    //export function printf(x,y) {
-    //    //var p = new Person(x,y);
-    //    console.log(x + y);
-    //}
+    toString1() {
+        return '(' + this.x + ', ' + this.y + ')';
+    }
+}
 
-    var firstName = 'Michael';
-    var lastName = 'Jackson';
-    var year = 1958;
-
-    export {firstName, lastName, year};
+export function returnPerson(x, y) {
+    var p = new Person(x, y);
+    return p;
+}
 
