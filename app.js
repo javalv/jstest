@@ -1,5 +1,5 @@
 /**
- * Created by f on 2016/6/29 git test.
+ * Created by f on 2016/6/29.
  */
 var conf = {
     env : 'iso'
