@@ -38,8 +38,8 @@
             },
             'group.city': {
                 $in: citys
-            }
-
+            },
+            'sysId':'1'
         }).forEach(function (doc) {
 
             var encrycode = doc.encrycode;
@@ -53,10 +53,9 @@
                 return;
             }
 
-            var newEncrycode = getNewEncrycode(encrycode, sysId);
-
             var id = doc._id;
-            updateEncrycode(id, newEncrycode, sysId);
+            //var newEncrycode = getNewEncrycode(encrycode, sysId);
+            //updateEncrycode(id, newEncrycode, sysId);
 
             print("complete " + doc._id);
 
